@@ -97,6 +97,13 @@ if [ "`grep "CONFIG_X86_64=y" $BUILD_DIR/linux-5.10.15/.config`" = "CONFIG_X86_6
     # Enable the mixed EFI mode when building 64-bit kernel.
     echo "CONFIG_EFI_MIXED=y" >> $BUILD_DIR/linux-5.10.15/.config
 fi
+# Support NVMe Driver
+echo "CONFIG_NVME_CORE=y" >> $BUILD_DIR/linux-5.10.15/.config
+echo "CONFIG_BLK_DEV_NVME=y" >> $BUILD_DIR/linux-5.10.15/.config
+echo "CONFIG_NVME_MULTIPATH=y" >> $BUILD_DIR/linux-5.10.15/.config
+echo "CONFIG_NVME_HWMON=n" >> $BUILD_DIR/linux-5.10.15/.config
+echo "CONFIG_NVME_FC=n" >> $BUILD_DIR/linux-5.10.15/.config
+echo "CONFIG_NVME_TCP=n" >> $BUILD_DIR/linux-5.10.15/.config
 
 make -j$PARALLEL_JOBS ARCH=$CONFIG_LINUX_ARCH HOSTCC="gcc -O2 -I$TOOLS_DIR/include -L$TOOLS_DIR/lib -Wl,-rpath,$TOOLS_DIR/lib" CROSS_COMPILE="$TOOLS_DIR/bin/$CONFIG_TARGET-" bzImage -C $BUILD_DIR/linux-5.10.15
 cp -v $BUILD_DIR/linux-5.10.15/arch/x86/boot/bzImage $KERNEL_DIR/bzImage
