@@ -111,17 +111,8 @@ if [ "$CONFIG_LINUX_ARCH" = "x86_64" ] ; then \
 fi;
 
 step "[2/3] CloneNux 1.0.0"
-cat > $BUILD_DIR/clonenux.c << "EOF"
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(void) {
-  printf("The source code of CloneNux is entered here.\n");
-  return 0;
-}
-EOF
-$TOOLS_DIR/bin/$CONFIG_TARGET-gcc -static $BUILD_DIR/clonenux.c -o $ROOTFS_DIR/bin/clonenux
-rm -rf $BUILD_DIR/clonenux.c
+make -C $SUPPORT_DIR/clonenux
+mv -v $SUPPORT_DIR/clonenux/clonenux $ROOTFS_DIR/bin/clonenux
 
 step "[3/3] Busybox 1.32.1"
 extract $SOURCES_DIR/busybox-1.32.1.tar.bz2 $BUILD_DIR

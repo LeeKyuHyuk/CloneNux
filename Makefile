@@ -21,7 +21,7 @@ image:
 	@$(SCRIPTS_DIR)/image.sh
 
 run:
-	@qemu-system-x86_64 -m 512M -kernel $(KERNEL_DIR)/bzImage -initrd $(IMAGES_DIR)/rootfs.cpio.gz # -nographic -append "console=ttyS0"
+	@qemu-system-x86_64 -kernel $(BUILD_DIR)/uefi/clonenux/x86_64/bzImage -initrd $(BUILD_DIR)/uefi/clonenux/x86_64/rootfs.cpio.gz
 
 clean:
 	@rm -rf out
