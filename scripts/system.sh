@@ -139,7 +139,7 @@ cat > $ROOTFS_DIR/etc/inittab << "EOF"
 ::shutdown:echo -e "\n  \\e[1mThank you for using CloneNux.\\e[0m\n"
 ::shutdown:sleep 1
 ::ctrlaltdel:/sbin/reboot
-::respawn:/bin/cttyhack /bin/clonenux
+::respawn:/bin/cttyhack /bin/sh
 tty2::respawn:/bin/sh
 tty3::respawn:/bin/sh
 tty4::respawn:/bin/sh

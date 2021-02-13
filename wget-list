@@ -11,7 +11,11 @@ https://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz
 https://ftp.gnu.org/gnu/m4/m4-1.4.18.tar.xz
 https://ftp.gnu.org/gnu/mpc/mpc-1.2.1.tar.gz
 https://ftp.gnu.org/gnu/mpfr/mpfr-4.1.0.tar.xz
+https://ftp.gnu.org/gnu/mtools/mtools-4.0.26.tar.bz2
+https://github.com/dosfstools/dosfstools/releases/download/v4.2/dosfstools-4.2.tar.gz
 https://github.com/ivandavidov/systemd-boot/releases/download/systemd-boot_26-May-2018/systemd-boot_26-May-2018.tar.xz
+https://github.com/libconfuse/libconfuse/releases/download/v3.3/confuse-3.3.tar.xz
+https://github.com/pengutronix/genimage/releases/download/v14/genimage-14.tar.xz
 https://github.com/westes/flex/releases/download/v2.6.3/flex-2.6.3.tar.gz
 https://kernel.org/pub/linux/kernel/v5.x/linux-5.10.15.tar.xz
 https://mirrors.edge.kernel.org/pub/linux/utils/boot/syslinux/syslinux-6.03.tar.xz
